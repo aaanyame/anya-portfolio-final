@@ -1,0 +1,5 @@
+/* Global */
+a{color:inherit}
+main{min-height:60vh}
+.btn{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px}
+:focus{outline:2px solid rgba(255,120,160,0.25);outline-offset:2px}

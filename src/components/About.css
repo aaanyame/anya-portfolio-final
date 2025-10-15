@@ -1,0 +1,7 @@
+.about{padding:48px 0;background:linear-gradient(180deg,#fff,#fff7fb)}
+.about-inner{max-width:900px;margin:0 auto;padding:0 18px}
+.about h2{font-size:1.6rem;margin-bottom:10px}
+.facts{margin-top:12px;list-style:disc;padding-left:20px;color:#6b6170}
+[data-theme="dark"] .about{background:linear-gradient(180deg,#071013,#07121a)}
+[data-theme="dark"] .about h2{color:#e6eef8}
+[data-theme="dark"] .facts{color:#9fb0bd}

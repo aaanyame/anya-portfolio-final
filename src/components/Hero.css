@@ -1,0 +1,10 @@
+.hero{padding:60px 0;background:linear-gradient(180deg,#fff7fb,#fff0f6);text-align:center}
+.hero-inner{max-width:900px;margin:0 auto;padding:0 18px}
+.hero h1{font-size:2rem;margin:0 0 12px;color:#1b1720}
+.hero p{color:#6b6170;margin:0 0 18px}
+.hero-actions{display:flex;gap:12px;justify-content:center}
+.btn-primary{background:linear-gradient(90deg,#ff7aa2,#ffc1d3);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn-outline{border:2px solid #ff7aa2;color:#ff7aa2;padding:10px 16px;border-radius:10px;text-decoration:none}
+[data-theme="dark"] .hero{background:linear-gradient(180deg,#071017,#07121a)}
+[data-theme="dark"] .hero h1{color:#e9f3f8}
+[data-theme="dark"] .hero p{color:#9fb0bd}

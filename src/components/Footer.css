@@ -1,0 +1,6 @@
+.site-footer{padding:18px 0;background:linear-gradient(90deg,#ffd7e8,#fff);margin-top:30px}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 18px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:700;color:#ff4f86}
+.links a{margin-left:12px;color:#333;text-decoration:none;font-weight:600}
+[data-theme="dark"] .site-footer{background:linear-gradient(90deg,#111,#222);color:#ddd}
+[data-theme="dark"] .links a{color:#fbc2eb}
