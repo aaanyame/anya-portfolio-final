@@ -1,3 +1,7 @@
+/* src/components/Header.css
+   Нежно-розовый градиентный хедер (восстановленный)
+*/
+
 .header{
   background: linear-gradient(90deg,#f9a7b0 0%, #ffd7e8 60%);
   padding:12px 0;
@@ -6,6 +10,12 @@
   z-index:1200;
   box-shadow: 0 6px 18px rgba(250,120,160,0.08);
 }
+
+.header.scrolled {
+  /* чуть более контрастная тень при скролле */
+  box-shadow: 0 10px 30px rgba(250,120,160,0.12);
+}
+
 .header-container{
   max-width:1100px;
   margin:0 auto;
@@ -15,18 +25,24 @@
   justify-content:space-between;
   gap:12px;
 }
+
 .logo{font-weight:800;color:#fff;font-size:1.25rem}
 .logo span{color:#ff7aa2;margin-left:6px}
+
 .nav{display:flex;gap:20px}
-.nav a{color:#fff;text-decoration:none;font-weight:600;transition:opacity .2s}
-.nav a:hover{opacity:.85}
+.nav a{color:#fff;text-decoration:none;font-weight:600;transition:opacity .2s, transform var(--transition)}
+.nav a:hover{opacity:.9; transform: translateY(-2px);}
+
 .controls{display:flex;gap:8px;align-items:center}
+
 .btn{background:transparent;border:1px solid rgba(255,255,255,0.25);color:#fff;padding:8px 10px;border-radius:10px;cursor:pointer}
 .btn-compact{padding:6px 8px;font-size:.9rem}
 .theme-toggle{background:#fff;color:#ff6f9b;border-radius:10px;padding:6px 8px;border:none;cursor:pointer}
+
 [data-theme="dark"] .header{background:linear-gradient(90deg,#2b2b2b,#1a1a1a)}
 [data-theme="dark"] .nav a{color:#f7d7e7}
 [data-theme="dark"] .logo{color:#fff}
+
 @media (max-width:720px){
   .nav{display:none}
   .header-container{justify-content:space-between}

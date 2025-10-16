@@ -1,18 +1,31 @@
-import React from 'react';
-import './About.css';
+/**
+ * src/components/About.jsx
+ * Раздел "Обо мне" c анимацией появления.
+ */
 
-export default function About(){
+import React from "react";
+import { motion } from "framer-motion";
+import "./About.css";
+
+export default function About() {
   return (
-    <section id="about" className="about">
-      <div className="about-inner">
+    <motion.section
+      id="about"
+      className="about"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="container about-inner">
         <h2>Обо мне</h2>
-        <p>Меня зовут Аня, мне 29 лет. Я окончила РГУТиС (туризм) с красным дипломом. За полгода обучения по frontend выполнила несколько проектов: лендинги, интернет-магазин, приложения на React и TypeScript.</p>
+        <p>Меня зовут Аня, мне 29 лет. Я работаю в сфере автострахования и стремлюсь стать Frontend-разработчиком.</p>
         <ul className="facts">
+          <li>Высшее образование: РГУТиС (туризм), красный диплом</li>
           <li>Золотая медаль в школе</li>
-          <li>Красный диплом (университет)</li>
-          <li>Работа в автостраховании — хочу сменить профессию</li>
+          <li>Реализованы проекты: лендинги, интернет-магазин, приложения на React</li>
         </ul>
       </div>
-    </section>
-  )
+    </motion.section>
+  );
 }

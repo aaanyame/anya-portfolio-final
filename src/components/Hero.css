@@ -1,10 +1,76 @@
-.hero{padding:60px 0;background:linear-gradient(180deg,#fff7fb,#fff0f6);text-align:center}
-.hero-inner{max-width:900px;margin:0 auto;padding:0 18px}
-.hero h1{font-size:2rem;margin:0 0 12px;color:#1b1720}
-.hero p{color:#6b6170;margin:0 0 18px}
-.hero-actions{display:flex;gap:12px;justify-content:center}
-.btn-primary{background:linear-gradient(90deg,#ff7aa2,#ffc1d3);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
-.btn-outline{border:2px solid #ff7aa2;color:#ff7aa2;padding:10px 16px;border-radius:10px;text-decoration:none}
-[data-theme="dark"] .hero{background:linear-gradient(180deg,#071017,#07121a)}
-[data-theme="dark"] .hero h1{color:#e9f3f8}
-[data-theme="dark"] .hero p{color:#9fb0bd}
+/* === Светлая тема Hero === */
+.hero {
+  background: linear-gradient(90deg, #ffd7e8 0%, #f9a7b0 100%);
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.hero .btn-primary {
+  background: #ff7aa2;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 122, 162, 0.4);
+}
+
+.hero .btn-primary:hover {
+  background: #ff4d88;
+  box-shadow: 0 6px 18px rgba(255, 122, 162, 0.6);
+  transform: translateY(-2px);
+}
+
+/* === Тёмная тема Hero === */
+[data-theme="dark"] .hero {
+  background: linear-gradient(90deg, #2b2b2b 0%, #1a1a1a 100%);
+  color: #f7d7e7;
+}
+
+[data-theme="dark"] .hero h1 {
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(255, 122, 162, 0.2);
+}
+
+[data-theme="dark"] .hero p {
+  color: #f2cde1;
+  opacity: 0.85;
+}
+
+[data-theme="dark"] .hero .btn-primary {
+  background: #ff7aa2;
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255, 122, 162, 0.4);
+}
+
+[data-theme="dark"] .hero .btn-primary:hover {
+  background: #ff4d88;
+  box-shadow: 0 6px 18px rgba(255, 122, 162, 0.6);
+}

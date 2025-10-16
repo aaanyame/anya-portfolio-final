@@ -1,19 +1,41 @@
+/* src/components/Projects.css
+   Стили для слайдера, карточек и фильтров
+*/
+
 .projects{padding:48px 0;background:linear-gradient(180deg,#fff0f6,#fff7fb)}
 .projects-inner{max-width:1100px;margin:0 auto;padding:0 18px}
+
+/* Заголовок */
+.projects h2{margin-bottom:12px}
+
+/* Фильтры */
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.filters button{padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:transparent;cursor:pointer}
-.filters button.active{background:linear-gradient(90deg,#ff7aa2,#ffc1d3);color:#fff;border:none}
+.filters button{padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:transparent;cursor:pointer;transition:all var(--transition)}
+.filters button.active{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#fff;border:none;transform:translateY(-2px)}
+
+/* Слайдер */
 .carousel{margin-bottom:22px}
-.slide-card{display:flex;gap:12px;align-items:center;background:var(--card-bg);border-radius:12px;padding:12px}
+.slide-card{display:flex;gap:12px;align-items:center;background:var(--card-bg);border-radius:12px;padding:12px;box-shadow:var(--card-shadow);transition:transform var(--transition), box-shadow var(--transition)}
 .slide-card img{width:220px;height:140px;object-fit:cover;border-radius:8px}
 .slide-body h3{margin:0 0 6px}
+.slide-actions{display:flex;gap:8px;}
+
+/* Сетка карточек */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.card{background:var(--card-bg);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(255,122,162,0.06)}
+.card{background:var(--card-bg);padding:12px;border-radius:12px;box-shadow:var(--card-shadow);transition:transform var(--transition), box-shadow var(--transition)}
 .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:8px}
-.meta{display:flex;justify-content:space-between;align-items:center}
-.tag{background:rgba(255,255,255,0.12);padding:6px 8px;border-radius:999px;font-size:.8rem}
+.card h3{margin:8px 0 6px}
+.card p{color:#6b6170}
+
+/* Теги */
+.tag{background:rgba(255,255,255,0.12);padding:6px 8px;border-radius:999px;font-size:.8rem;margin-right:6px;display:inline-block}
+
+/* GitHub list */
 .github-list{margin-top:24px}
 .repos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
-.repo{display:block;padding:10px;background:var(--card-bg);border-radius:8px;text-decoration:none;color:inherit}
+.repo{display:block;padding:10px;background:var(--card-bg);border-radius:8px;text-decoration:none;color:inherit;box-shadow:var(--card-shadow);transition:transform var(--transition)}
+.repo strong{display:block;margin-bottom:6px}
+
+/* Dark theme adjustments */
 [data-theme="dark"] .projects{background:linear-gradient(180deg,#071013,#07151a)}
 [data-theme="dark"] .card{box-shadow:0 6px 26px rgba(0,0,0,0.45)}
